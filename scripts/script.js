@@ -26,10 +26,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const backBtn = document.getElementById('back-btn');
     if (backBtn) {
         backBtn.addEventListener('click', () => {
-            document.getElementById('schedule-view').classList.add('hidden');
-            document.getElementById('main-view').classList.remove('hidden');
-            window.scrollTo(0, 0);
-        });
+    document.getElementById('schedule-view').classList.add('hidden');
+
+    document.getElementById('main-view').classList.remove('hidden');
+    document.querySelector('.full-width-area').classList.remove('hidden');
+
+    window.scrollTo(0, 0);
+});
+
     }
 });
 
@@ -174,12 +178,15 @@ function renderBusGrid(buses) {
 // 5. Відкриття розкладу
 function openSchedule(bus) {
     document.getElementById('main-view').classList.add('hidden');
+    document.querySelector('.full-width-area').classList.add('hidden');
+
     document.getElementById('schedule-view').classList.remove('hidden');
     document.getElementById('route-title-display').innerText = `№${bus.number} ${bus.title}`;
-    
+
     renderRouteDetails(bus);
     window.scrollTo(0, 0);
 }
+
 
 // 6. Генерація розкладу та карти
 function renderRouteDetails(bus) {
