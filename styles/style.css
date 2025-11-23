@@ -226,6 +226,22 @@ header {
     gap: 15px;
 }
 
+@media (max-width: 991px) {
+    .header-right {
+        gap: 8px !important; /* було 15px */
+    }
+
+    .clock {
+        margin-right: 4px !important;
+    }
+
+    .theme-switch-wrapper.header-switch {
+        gap: 5px !important;
+        padding: 5px !important;
+    }
+}
+
+
 /* --- МОБІЛЬНА ВЕРСІЯ: кнопка поруч з логотипом --- */
 @media (max-width: 575px) {
     .header-flex-container {
@@ -490,6 +506,41 @@ body.dark-mode .donor-item {
     margin-bottom: 20px;
     padding: 0 30px;
 }
+
+/* Телефони — блок розтягується повністю */
+@media (max-width: 575px) {
+    .bus-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 10px !important;  /* було 30px */
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+}
+
+/* Планшети */
+@media (min-width: 576px) and (max-width: 991px) {
+    .bus-grid {
+        grid-template-columns: repeat(3, 1fr); /* із 4 → 3 ширші блоки */
+        padding: 0 15px !important;
+    }
+}
+
+/* Картки трохи більше на малих екранах */
+@media (max-width: 991px) {
+    .bus-card {
+        padding: 25px 15px !important;
+        border-radius: 18px;
+    }
+
+    .bus-num {
+        font-size: 2.2rem !important;
+    }
+
+    .bus-title {
+        font-size: 1.3rem !important;
+    }
+}
+
 
 /* Для телефону — 2 колонки */
 @media (max-width: 575px) {
@@ -1243,3 +1294,19 @@ body.dark-mode .stop-name {
     border-bottom-left-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
 }
+
+/* Телефони */
+@media (max-width: 575px) {
+    .logo-img {
+        height: 40px !important; /* було 32–36 */
+    }
+}
+
+/* Планшети */
+@media (min-width: 576px) and (max-width: 991px) {
+    .logo-img {
+        height: 48px !important;
+    }
+}
+
+
