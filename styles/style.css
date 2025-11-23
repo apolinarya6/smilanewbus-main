@@ -1310,3 +1310,29 @@ body.dark-mode .stop-name {
 }
 
 
+/* === MOBILE & TABLET: пошук повної ширини === */
+@media (max-width: 991px) {
+    .search-group {
+        padding: 0 !important;   /* було 30px */
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+}
+
+
+/* === MOBILE & TABLET: картки автобусів вирівняні по ширині === */
+@media (max-width: 991px) {
+    .bus-grid {
+        padding: 0 !important;   /* знімаємо зайві відступи */
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 575px) {
+    .bus-num {
+        font-size: 2rem !important; /* було ~2–2.2rem */
+    }
+}
+
