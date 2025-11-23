@@ -152,9 +152,11 @@ header {
         padding: 6px 14px !important;
         font-size: 1.1rem !important;
     }
+
     .header-bot-btn i {
         font-size: 1.5rem !important;
     }
+
     .header-bot-btn .bot-text {
         font-size: 1.1rem !important;
     }
@@ -167,9 +169,11 @@ header {
         padding: 8px 20px !important;
         font-size: 1.1rem !important;
     }
+
     .header-bot-btn i {
         font-size: 1.5rem !important;
     }
+
     .header-bot-btn .bot-text {
         font-size: 1.1rem !important;
     }
@@ -182,9 +186,11 @@ header {
         padding: 10px 25px !important;
         font-size: 1.3rem !important;
     }
+
     .header-bot-btn i {
         font-size: 1.8rem !important;
     }
+
     .header-bot-btn .bot-text {
         font-size: 1.3rem !important;
     }
@@ -228,7 +234,8 @@ header {
 
 @media (max-width: 991px) {
     .header-right {
-        gap: 8px !important; /* було 15px */
+        gap: 8px !important;
+        /* було 15px */
     }
 
     .clock {
@@ -254,12 +261,14 @@ header {
 
     .header-center {
         flex: 0 0 auto;
-        justify-content: flex-start;   /* кнопка буде біля лого */
+        justify-content: flex-start;
+        /* кнопка буде біля лого */
         margin-left: 10px;
     }
 
     .header-right {
-        margin-left: auto; /* годинник + тумблер праворуч */
+        margin-left: auto;
+        /* годинник + тумблер праворуч */
     }
 }
 
@@ -479,7 +488,7 @@ body.dark-mode .donor-item {
 
 .donor-name {
     color: #173a53;
-       font-size: 1.4rem;
+    font-size: 1.4rem;
 
 }
 
@@ -511,7 +520,8 @@ body.dark-mode .donor-item {
 @media (max-width: 575px) {
     .bus-grid {
         grid-template-columns: repeat(2, 1fr);
-        padding: 0 10px !important;  /* було 30px */
+        padding: 0 10px !important;
+        /* було 30px */
         width: 100% !important;
         box-sizing: border-box;
     }
@@ -520,7 +530,8 @@ body.dark-mode .donor-item {
 /* Планшети */
 @media (min-width: 576px) and (max-width: 991px) {
     .bus-grid {
-        grid-template-columns: repeat(3, 1fr); /* із 4 → 3 ширші блоки */
+        grid-template-columns: repeat(3, 1fr);
+        /* із 4 → 3 ширші блоки */
         padding: 0 15px !important;
     }
 }
@@ -624,7 +635,7 @@ body.dark-mode .donor-item {
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--glass-border);
     box-shadow: var(--glass-shadow);
-border-radius: 0 !important;
+    border-radius: 0 !important;
     padding: 0;
     transition: all 0.2s;
     text-align: center;
@@ -642,7 +653,8 @@ border-radius: 0 !important;
 
 /* Попутка */
 .poputka-panel-wrapper .glass-panel-header {
-        background: rgba(0, 125, 214, 0.20) !important; /* пастельно-синій */
+    background: rgba(0, 125, 214, 0.20) !important;
+    /* пастельно-синій */
     border: 1px solid rgba(0, 125, 214, 0.45) !important;
 }
 
@@ -661,7 +673,8 @@ body.dark-mode .poputka-panel-wrapper .glass-panel-header a {
 
 /* Інфо */
 .general-info-panel-wrapper .glass-panel-header {
-      background: rgba(0, 125, 214, 0.20) !important; /* пастельно-синій */
+    background: rgba(0, 125, 214, 0.20) !important;
+    /* пастельно-синій */
     border: 1px solid rgba(0, 125, 214, 0.45) !important;
 }
 
@@ -733,7 +746,8 @@ body.dark-mode .general-info-panel-wrapper .glass-panel-header a {
 }
 
 .poputka-price {
-    font-size: 1.6rem !important; /* було 1.1rem */
+    font-size: 1.6rem !important;
+    /* було 1.1rem */
     font-weight: 800;
     color: #031c2f !important;
     margin-top: -10px;
@@ -786,6 +800,8 @@ body.dark-mode .poputka-route {
 
 .poputka-link:hover {
     background: rgba(255, 255, 255, 0.5);
+        color: rgba(11, 71, 130, 0.985);
+
 }
 
 .link-icon {
@@ -959,7 +975,8 @@ body.dark-mode .poputka-route {
     /* Суцільний білий фон */
     border: 2px solid #b8860b !important;
     /* Чіткий темний контур */
-    color: var(--text-color);    /* Чорний текст */
+    color: var(--text-color);
+    /* Чорний текст */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1) !important;
     /* Легка тінь для об'єму */
     backdrop-filter: none !important;
@@ -1204,24 +1221,29 @@ body.dark-mode .stop-name {
 
     /* 🔥 ЗБІЛЬШЕНЕ ЛОГО */
     .logo-img {
-        height: 55px !important; /* було 40px */
+        height: 55px !important;
+        /* було 40px */
         width: auto;
     }
 
     /* 🔥 МЕНША ВИСОТА ХЕДЕРА */
     header {
-        padding: 4px 15px !important; /* було 8px 15px */
+        padding: 4px 15px !important;
+        /* було 8px 15px */
     }
 
     /* 🔥 БІЛЬШИЙ ТЕКСТ В КНОПЦІ БОТА */
     .header-bot-btn {
-        font-size: 1.4rem !important; /* було 1rem */
+        font-size: 1.4rem !important;
+        /* було 1rem */
         padding: 10px 25px !important;
         height: 45px !important;
     }
-.header-bot-btn i,
+
+    .header-bot-btn i,
     .header-bot-btn img {
-        font-size: 1.8rem !important; /* Якщо це icon-font */
+        font-size: 1.8rem !important;
+        /* Якщо це icon-font */
         width: auto !important;
         margin-right: 8px !important;
     }
@@ -1234,8 +1256,10 @@ body.dark-mode .stop-name {
 
 /* Зменшуємо фон (track) */
 .custom-toggle {
-    width: 80px !important;   /* було 100px */
-    height: 36px !important;  /* було 44px */
+    width: 80px !important;
+    /* було 100px */
+    height: 36px !important;
+    /* було 44px */
 }
 
 /* Фон всередині */
@@ -1245,15 +1269,17 @@ body.dark-mode .stop-name {
 
 /* Збільшуємо саму кнопку (knob) */
 .toggle-knob {
-    width: 32px !important;   /* було 36px */
+    width: 32px !important;
+    /* було 36px */
     height: 32px !important;
     bottom: 2px !important;
     left: 2px !important;
 }
 
 /* Коли увімкнено — зсуваємо на правильну позицію */
-.custom-toggle input:checked + .toggle-track .toggle-knob {
-    transform: translateX(44px) !important; /* під твій новий розмір */
+.custom-toggle input:checked+.toggle-track .toggle-knob {
+    transform: translateX(44px) !important;
+    /* під твій новий розмір */
 }
 
 /* ЗМЕНЬШЕНИЙ КРУЖОЧОК (knob) */
@@ -1265,7 +1291,7 @@ body.dark-mode .stop-name {
 }
 
 /* НОВА позиція для включеного стану */
-.custom-toggle input:checked + .toggle-track .toggle-knob {
+.custom-toggle input:checked+.toggle-track .toggle-knob {
     transform: translateX(48px) !important;
 }
 
@@ -1298,7 +1324,8 @@ body.dark-mode .stop-name {
 /* Телефони */
 @media (max-width: 575px) {
     .logo-img {
-        height: 40px !important; /* було 32–36 */
+        height: 40px !important;
+        /* було 32–36 */
     }
 }
 
@@ -1313,7 +1340,8 @@ body.dark-mode .stop-name {
 /* === MOBILE & TABLET: пошук повної ширини === */
 @media (max-width: 991px) {
     .search-group {
-        padding: 0 !important;   /* було 30px */
+        padding: 0 !important;
+        /* було 30px */
         width: 100% !important;
         box-sizing: border-box;
     }
@@ -1323,7 +1351,8 @@ body.dark-mode .stop-name {
 /* === MOBILE & TABLET: картки автобусів вирівняні по ширині === */
 @media (max-width: 991px) {
     .bus-grid {
-        padding: 0 !important;   /* знімаємо зайві відступи */
+        padding: 0 !important;
+        /* знімаємо зайві відступи */
         width: 100% !important;
         max-width: 100% !important;
         box-sizing: border-box;
@@ -1332,7 +1361,47 @@ body.dark-mode .stop-name {
 
 @media (max-width: 575px) {
     .bus-num {
-        font-size: 2rem !important; /* було ~2–2.2rem */
+        font-size: 2rem !important;
+        /* було ~2–2.2rem */
     }
 }
 
+
+
+
+@media (min-width: 992px) {
+    .big-blue-box {
+        display: flex;
+        gap: 40px;
+        padding: 30px;
+        background: var(--glass-bg);
+        border-radius: 25px;
+        border: 1px solid var(--glass-border);
+        backdrop-filter: blur(12px);
+    }
+
+    #route-map-container,
+    #schedule-container {
+        flex: 1;
+    }
+}
+
+
+
+/* Закритий accordion — <a> теж заокруглений */
+.glass-panel-header:has(a.collapsed) a {
+    border-radius: 20px !important;
+}
+
+/* Відкритий accordion — верхні кути, нижні прямі */
+.glass-panel-header:has(a:not(.collapsed)) a {
+    border-top-left-radius: 20px !important;
+    border-top-right-radius: 20px !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+
+a:hover {
+    text-decoration: none !important;
+}
