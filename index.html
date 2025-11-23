@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmilaBusTime</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+    <header class="container-fluid header-full-width">
+        <div class="header-flex-container">
+
+            <div class="header-logo-wrapper">
+                <a href="https://www.smila-rada.gov.ua/" target="_blank">
+                    <img src="img/logo_gs_full.png" alt="Logo" class="logo-img">
+                </a>
+            </div>
+
+            <div class="header-center">
+                <a href="https://t.me/SmilaBusTime_bot" target="_blank"
+                    class="glass-action-button ios-liquid-blue header-bot-btn">
+                    <i class="fa-brands fa-telegram"></i>
+                    <span class="bot-text">Бот розкладу</span>
+                </a>
+            </div>
+
+            <div class="header-right">
+                <div id="clock" class="clock">00:00</div>
+
+                <div class="theme-switch-wrapper header-switch">
+                    <label class="custom-toggle">
+                        <input type="checkbox" id="theme-checkbox">
+                        <div class="toggle-track">
+                            <div class="toggle-knob"></div>
+                            <span class="text-on">🌑</span>
+                            <span class="text-off">☀️</span>
+                        </div>
+                    </label>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+
+    <main id="main-view" class="container main-content-container">
+
+        <div class="row donors-row" style="margin-top: 20px; margin-bottom: 0px;">
+            <div class="col-xs-12 donors-col-full">
+                <div class="top-donators-box glass-panel donate-banner">
+                    <strong class="donor-list-title">👑 Топ донатери:</strong>
+                    <div class="donor-list">
+                        <a href="https://t.me/+v4ane3GeUuE5Mjhi" target="_blank" class="donor-item">
+                            <span class="donor-name">Сміла про головне:</span>
+                            <span class="donor-amount">200 UAH</span>
+                        </a>
+                        <a href="https://www.instagram.com/dima_rudas_/" target="_blank" class="donor-item">
+                            <span class="donor-name">Дмитро Рудас:</span>
+                            <span class="donor-amount">100 UAH</span>
+                        </a>
+                    </div>
+
+                    <div
+                        style="font-weight: bold; color: var(--text-color); opacity: 0.8; font-size: 1em; text-align: center; margin-top: 15px; padding-top: 10px; border-top: 1px dashed var(--glass-border);">
+                        📰 Тут може бути ваша реклама
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row donate-button-row text-center" style="margin-bottom: 25px;">
+            <div class="col-xs-12" style="display: flex; justify-content: center;">
+                <a href="https://googlove.netlify.app/donate/index.html" target="_blank"
+                    class="glass-action-button gold-button-universal" style="max-width: 350px;">
+                    💰 Підтримати проєкт
+                </a>
+            </div>
+        </div>
+
+
+
+
+
+    </main>
+
+    <div class="full-width-area">
+        <div class="row search-input-row" style="margin-bottom: 25px;">
+            <div class="col-xs-12 search-col-full">
+                <div class="input-group search-group">
+                    <span class="input-group-addon search-icon">🔍</span>
+                    <input type="text" id="search-input" class="form-control"
+                        placeholder="Введіть номер маршруту або назву...">
+                </div>
+            </div>
+        </div>
+
+        <div class="row bus-grid-row">
+            <div class="col-xs-12 bus-grid-col">
+                <div id="bus-grid" class="bus-grid">
+                    <div class="loader">Завантаження розкладу...</div>
+                </div>
+            </div>
+            <div class="col-xs-12 accordion-col">
+                <div id="accordion" role="tablist" aria-multiselectable="true">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section id="schedule-view" class="hidden container">
+        <div class="schedule-header">
+            <button id="back-btn">⬅️ Назад</button>
+            <h2 id="route-title-display"></h2>
+        </div>
+
+        <div id="route-map-container" class="glass-panel map-panel">
+        </div>
+
+        <div id="schedule-container">
+        </div>
+    </section>
+
+    <div class="container footer-container">
+        <div class="row feedback-footer-row" style="margin-top: 20px; margin-bottom: 10px;">
+            <div class="col-xs-12 text-center">
+                <a href="https://t.me/flame4ost" target="_blank"
+                    class="glass-action-button full-width-btn ios-liquid-blue" style="max-width: 350px;">
+                    ✍️ Зворотний зв'язок з розробником
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <div class="footer-date">Оновлено: Травень 2024</div>
+                <footer>
+                    <p>© 2022-2025 SmilaBusTime | Dev by Yaroslav Hohulov</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
