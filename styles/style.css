@@ -1576,7 +1576,7 @@ a:hover {
 
 /* 📌 БАЗА — мобільні телефони */
 #route-title-display {
-    font-size: 1.5rem !important;
+    font-size: 1.65rem !important;
     font-weight: 800;
     /* якщо хочеш більш жирний, можна змінити */
 }
@@ -1584,7 +1584,7 @@ a:hover {
 /* 📟 Планшети 576–991px */
 @media (min-width: 576px) and (max-width: 991px) {
     #route-title-display {
-        font-size: 1.6rem !important;
+        font-size: 1.75rem !important;
     }
 }
 
