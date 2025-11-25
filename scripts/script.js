@@ -190,62 +190,63 @@ function openSchedule(bus) {
 
 // 6. Генерація розкладу та карти
 function renderRouteDetails(bus) {
-    const container = document.getElementById('schedule-container');
-    if (!container) return;
-    container.innerHTML = ''; 
-    
-    // Початок Bootstrap-сітки
-    let html = '<div class="row">';
 
-    // 1. Колонка для Карти (займає 6/12 на великих екранах)
-    const mapSrc = bus.mapIframeSrc || 'about:blank'; 
-    
-    html += `
-        <div class="col-xs-12 col-md-6 map-column">
-            <h4 class="map-title">Маршрут на карті</h4>
-            <iframe 
-                frameborder="0" 
-                style="-moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5); -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5); box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5); border: 0; width: 100%; height: 303px;" 
-                src="${mapSrc}" 
-                width="300" 
-                height="303">
-            </iframe>
-        </div>
+    // Генерація карти
+    const mapHTML = `
+        <h4 class="map-title">Маршрут на карті</h4>
+        <iframe 
+            src="${bus.mapIframeSrc}" 
+            width="100%" 
+            height="300" 
+            style="border:0; border-radius:20px;">
+        </iframe>
     `;
 
-    // 2. Колонка для Розкладу
-    html += '<div class="col-xs-12 col-md-6 schedule-column">';
-    html += `<h4 class="schedule-title">Розклад руху (Маршрут №${bus.number})</h4>`;
+    // Генерація розкладу
+    const scheduleHTML = generateScheduleHTML(bus); 
 
+    // Мобільні версії
+    document.getElementById("mobile-map").innerHTML = mapHTML;
+    document.getElementById("mobile-schedule").innerHTML = scheduleHTML;
+
+    // ПК версії
+    document.getElementById("desktop-map").innerHTML = mapHTML;
+    document.getElementById("desktop-schedule").innerHTML = scheduleHTML;
+}
+
+function generateScheduleHTML(bus) {
     const now = new Date();
     const currentMinutes = now.getHours() * 60 + now.getMinutes();
+    let html = `<h4 class="schedule-title">Розклад руху (Маршрут №${bus.number})</h4>`;
 
     bus.routes.forEach(route => {
-        let stopsHTML = '';
+        html += `
+            <div class="route-block">
+                <h3 class="route-direction">➡️ ${route.direction} <br>
+                <small style="font-size:0.7em; color:#666">📅 ${route.workDays}</small></h3>
+        `;
 
         route.stops.forEach(stop => {
-            let timesHTML = '';
+            let timesHTML = "";
             let foundNext = false;
 
-            stop.times.forEach(timeStr => {
-                // Парсинг часу "14:30 (примітка)"
-                const cleanTime = timeStr.split(' ')[0]; 
-                const [h, m] = cleanTime.split(':').map(Number);
-                const busMinutes = h * 60 + m;
+            stop.times.forEach(t => {
+                const clean = t.split(" ")[0];
+                const [h, m] = clean.split(":").map(Number);
+                const tm = h * 60 + m;
 
-                let className = 'time-badge';
-                
-                if (busMinutes < currentMinutes) {
-                    className += ' past';
-                } else if (!foundNext && busMinutes >= currentMinutes) {
-                    className += ' next';
-                    foundNext = true; 
+                let cls = "time-badge";
+
+                if (tm < currentMinutes) cls += " past";
+                else if (!foundNext) {
+                    cls += " next";
+                    foundNext = true;
                 }
 
-                timesHTML += `<span class="${className}">${timeStr}</span>`;
+                timesHTML += `<span class="${cls}">${t}</span>`;
             });
 
-            stopsHTML += `
+            html += `
                 <div class="stop-item">
                     <span class="stop-name">🚏 ${stop.name}</span>
                     <div class="times-row">${timesHTML}</div>
@@ -253,17 +254,12 @@ function renderRouteDetails(bus) {
             `;
         });
 
-        html += `
-            <div class="route-block">
-                <h3 class="route-direction">➡️ ${route.direction} <br><small style="font-size:0.7em; color:#666">📅 ${route.workDays}</small></h3>
-                ${stopsHTML}
-            </div>
-        `;
+        html += `</div>`;
     });
 
-    html += '</div></div>'; 
-    container.innerHTML = html;
+    return html;
 }
+
 
 // Годинник
 function setupClock() {
