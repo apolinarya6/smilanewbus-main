@@ -52,88 +52,101 @@
         </div>
     </header>
 
-<div id="home-screen">
+    <div id="home-screen">
 
-    <main id="main-view" class="container main-content-container">
+        <main id="main-view" class="container main-content-container">
 
-        <div class="row donors-row" style="margin-top: 20px; margin-bottom: 0px;">
-            <div class="col-xs-12 donors-col-full">
-                <div class="top-donators-box glass-panel donate-banner">
-                    <strong class="donor-list-title">👑 Топ донатери:</strong>
-                    <div class="donor-list">
-                        <a href="https://t.me/+v4ane3GeUuE5Mjhi" target="_blank" class="donor-item">
-                            <span class="donor-name">Сміла про головне:</span>
-                            <span class="donor-amount">200 UAH</span>
-                        </a>
-                        <a href="https://www.instagram.com/dima_rudas_/" target="_blank" class="donor-item">
-                            <span class="donor-name">Дмитро Рудас:</span>
-                            <span class="donor-amount">100 UAH</span>
-                        </a>
+            <div class="row donors-row" style="margin-top: 20px; margin-bottom: 0px;">
+                <div class="col-xs-12 donors-col-full">
+                    <div class="top-donators-box glass-panel donate-banner">
+                        <strong class="donor-list-title">👑 Топ донатери:</strong>
+                        <div class="donor-list">
+                            <a href="https://t.me/+v4ane3GeUuE5Mjhi" target="_blank" class="donor-item">
+                                <span class="donor-name">Сміла про головне:</span>
+                                <span class="donor-amount">200 UAH</span>
+                            </a>
+                            <a href="https://www.instagram.com/dima_rudas_/" target="_blank" class="donor-item">
+                                <span class="donor-name">Дмитро Рудас:</span>
+                                <span class="donor-amount">100 UAH</span>
+                            </a>
+                        </div>
+
+                        <div
+                            style="font-weight: bold; color: var(--text-color); opacity: 0.8; font-size: 1em; text-align: center; margin-top: 15px; padding-top: 10px; border-top: 1px dashed var(--glass-border);">
+                            📰 Тут може бути ваша реклама
+                        </div>
+
                     </div>
+                </div>
+            </div>
 
-                    <div
-                        style="font-weight: bold; color: var(--text-color); opacity: 0.8; font-size: 1em; text-align: center; margin-top: 15px; padding-top: 10px; border-top: 1px dashed var(--glass-border);">
-                        📰 Тут може бути ваша реклама
+
+            <div class="row donate-button-row text-center" style="margin-bottom: 25px;">
+                <div class="col-xs-12" style="display: flex; justify-content: center;">
+                    <a href="https://googlove.netlify.app/donate/index.html" target="_blank"
+                        class="glass-action-button gold-button-universal" style="max-width: 350px;">
+                        💰 Підтримати проєкт
+                    </a>
+                </div>
+            </div>
+
+
+
+
+
+        </main>
+
+        <div class="full-width-area">
+            <div class="row search-input-row" style="margin-bottom: 25px;">
+                <div class="col-xs-12 search-col-full">
+                    <div class="input-group search-group">
+                        <span class="input-group-addon search-icon">🔍</span>
+                        <input type="text" id="search-input" class="form-control"
+                            placeholder="Введіть номер маршруту або назву...">
                     </div>
-
                 </div>
             </div>
-        </div>
 
-
-        <div class="row donate-button-row text-center" style="margin-bottom: 25px;">
-            <div class="col-xs-12" style="display: flex; justify-content: center;">
-                <a href="https://googlove.netlify.app/donate/index.html" target="_blank"
-                    class="glass-action-button gold-button-universal" style="max-width: 350px;">
-                    💰 Підтримати проєкт
-                </a>
-            </div>
-        </div>
-
-
-
-
-
-    </main>
-
-    <div class="full-width-area">
-        <div class="row search-input-row" style="margin-bottom: 25px;">
-            <div class="col-xs-12 search-col-full">
-                <div class="input-group search-group">
-                    <span class="input-group-addon search-icon">🔍</span>
-                    <input type="text" id="search-input" class="form-control"
-                        placeholder="Введіть номер маршруту або назву...">
+            <div class="row bus-grid-row">
+                <div class="col-xs-12 bus-grid-col">
+                    <div id="bus-grid" class="bus-grid">
+                        <div class="loader">Завантаження розкладу...</div>
+                    </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="row bus-grid-row">
-            <div class="col-xs-12 bus-grid-col">
-                <div id="bus-grid" class="bus-grid">
-                    <div class="loader">Завантаження розкладу...</div>
-                </div>
-            </div>
-            <div class="col-xs-12 accordion-col">
-                <div id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="col-xs-12 accordion-col">
+                    <div id="accordion" role="tablist" aria-multiselectable="true">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-            </div>
 
 
 
     <section id="schedule-view" class="hidden container">
-        <div class="schedule-header">
-            <button id="back-btn">⬅️ Назад</button>
-            <h2 id="route-title-display"></h2>
-        </div>
 
-        <div id="route-map-container" class="glass-panel map-panel">
-        </div>
+    <div class="schedule-header">
+        <button id="back-btn">⬅️ Назад</button>
+        <h2 id="route-title-display"></h2>
+    </div>
 
-        <div id="schedule-container">
+    <!-- 📱 Мобільна карта -->
+    <div id="mobile-map" class="map-mobile"></div>
+
+    <!-- 🖥 ПК: карта + розклад в одному контейнері -->
+    <div id="desktop-schedule-box" class="schedule-desktop-box glass-panel">
+        <div class="inner-flex">
+            <div id="desktop-map" class="map-desktop"></div>
+            <div id="desktop-schedule"></div>
         </div>
+    </div>
+
+    <!-- 📱 Мобільний розклад -->
+    <div id="mobile-schedule"></div>
+
+</section>
+
+
     </section>
 
     <div class="container footer-container">
