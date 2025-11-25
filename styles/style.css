@@ -833,7 +833,7 @@ body.dark-mode .poputka-route {
 
 #back-btn {
     background: var(--glass-bg);
-    color: var(--text-color);
+    color: #1046A3;
     border: 1px solid var(--glass-border);
     padding: 10px 20px;
     border-radius: 30px;
@@ -845,7 +845,7 @@ body.dark-mode .poputka-route {
 #route-title-display {
     margin: 0;
     font-size: 1.3rem;
-    color: var(--primary);
+    color: rgb(16, 70, 164);
     text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
 }
 
@@ -880,7 +880,7 @@ body.dark-mode .poputka-route {
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 10px;
-    color: var(--primary);
+    color: #2670a5;
 }
 
 .schedule-title {
@@ -1591,7 +1591,9 @@ a:hover {
 /* 🖥 ПК ≥992px */
 @media (min-width: 992px) {
     #route-title-display {
-        font-size: 1.9rem !important;
+        font-size: 2rem !important;
+            color: #1046A3;
+
     }
 }
 
